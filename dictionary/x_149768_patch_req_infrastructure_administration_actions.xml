@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Infrastructure Administration Actions" max_length="40" name="x_149768_patch_req_infrastructure_administration_actions" type="collection">
+        <element label="Action" max_length="40" name="action" type="string"/>
+        <element label="Order" max_length="40" name="order" type="string"/>
+    </element>
+</database>

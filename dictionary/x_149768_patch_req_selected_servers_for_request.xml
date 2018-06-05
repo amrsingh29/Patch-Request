@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Selected Servers for Request" max_length="40" name="x_149768_patch_req_selected_servers_for_request" type="collection">
+        <element label="Infrastructure Administration Request" max_length="32" name="infrastructure_administration_request" reference="x_149768_patch_req_patch_request" type="reference"/>
+        <element label="Scheduled End Time" max_length="40" name="scheduled_end_time" type="glide_date_time"/>
+        <element label="Scheduled Start Time" max_length="40" name="scheduled_start_time" type="glide_date_time"/>
+        <element label="Server" max_length="32" name="server" reference="x_149768_patch_req_patching_servers" type="reference"/>
+        <element label="Servers for Request" max_length="32" name="servers_for_request" reference="x_149768_patch_req_servers_for_request" type="reference"/>
+        <element default="Not Selected" label="State" max_length="40" name="state" type="string"/>
+        <index name="index">
+            <element name="server"/>
+        </index>
+        <index name="index2">
+            <element name="servers_for_request"/>
+        </index>
+    </element>
+</database>

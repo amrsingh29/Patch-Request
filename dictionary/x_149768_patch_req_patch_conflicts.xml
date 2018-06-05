@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Patch Conflicts" max_length="40" name="x_149768_patch_req_patch_conflicts" type="collection">
+        <element label="Affected Server" max_length="32" name="affected_server" reference="x_149768_patch_req_patching_servers" type="reference"/>
+        <element label="Conflicting Request" max_length="32" name="conflicting_request" reference="x_149768_patch_req_patch_request" type="reference"/>
+        <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Last Checked" max_length="40" name="last_checked" type="glide_date_time" use_dynamic_default="true"/>
+        <element label="Maintenance Window" max_length="32" name="maintenance_window" reference="cmn_schedule" type="reference"/>
+        <element label="Patch Request" max_length="32" name="patch_request" reference="x_149768_patch_req_patch_request" type="reference"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="affected_server"/>
+        </index>
+        <index name="index2">
+            <element name="conflicting_request"/>
+        </index>
+        <index name="index3">
+            <element name="maintenance_window"/>
+        </index>
+        <index name="index4">
+            <element name="patch_request"/>
+        </index>
+    </element>
+</database>

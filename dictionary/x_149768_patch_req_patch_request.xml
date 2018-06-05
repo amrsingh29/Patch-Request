@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Patch Request" max_length="40" name="x_149768_patch_req_patch_request" type="collection">
+        <element label="Action" max_length="32" name="action" reference="x_149768_patch_req_infrastructure_administration_actions" type="reference"/>
+        <element label="API Call Last Triggered" max_length="40" name="api_call_last_triggered" type="glide_date_time"/>
+        <element label="API Call Log" max_length="4000" name="api_call_log" type="string"/>
+        <element label="API Call Results" max_length="40" name="api_call_results" type="string"/>
+        <element label="CISM Reference Number" max_length="40" name="cism_reference_number" type="string"/>
+        <element default="Fill in the Scheduled Start Time, Scheduled End Time, and List of Servers, and click on the 'Run Conflict Detection' button to check for conflicts" label="Conflict Description" max_length="1000" name="conflict_description" type="string"/>
+        <element default="Not Run" label="Conflict Status" max_length="40" name="conflict_status" type="string"/>
+        <element label="KB Article" max_length="32" name="kb_article" reference="kb_knowledge" type="reference"/>
+        <element label="List of Servers" max_length="4000" name="list_of_servers" reference="x_149768_patch_req_patching_servers" type="glide_list"/>
+        <element label="Scheduled End Time" max_length="40" name="scheduled_end_time" type="glide_date_time"/>
+        <element label="Scheduled Start Time" max_length="40" name="scheduled_start_time" type="glide_date_time"/>
+        <element label="Title" max_length="100" name="title" type="string"/>
+        <element label="Type" max_length="40" name="type" type="string"/>
+    </element>
+</database>

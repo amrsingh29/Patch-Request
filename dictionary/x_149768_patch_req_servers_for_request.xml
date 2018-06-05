@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Servers for Request" max_length="40" name="x_149768_patch_req_servers_for_request" type="collection">
+        <element choice="1" label="Environment" max_length="40" name="environment" type="choice">
+            <choice/>
+        </element>
+        <element label="Infrastructure Administration Request" max_length="32" name="infrastructure_administration_request" reference="x_149768_patch_req_patch_request" type="reference"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" default="All" label="Project Code" max_length="40" name="project_code" type="choice">
+            <choice/>
+        </element>
+    </element>
+</database>

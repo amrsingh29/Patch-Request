@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Patching Servers" max_length="40" name="x_149768_patch_req_patching_servers" type="collection">
+        <element label="Application Owner" max_length="32" name="application_owner" reference="sys_user" type="glide_list"/>
+        <element label="App Type" max_length="40" name="app_type" type="string"/>
+        <element choice="1" label="Environment" max_length="40" name="environment" type="choice">
+            <choice/>
+        </element>
+        <element label="Hostname" max_length="40" name="hostname" type="string"/>
+        <element label="Infrastructure Owner" max_length="32" name="infrastructure_owner" reference="sys_user" type="reference"/>
+        <element label="Maintenance Window" max_length="32" name="maintenance_window" reference="cmn_schedule" type="reference"/>
+        <element label="OS Type" max_length="40" name="os_type" type="string"/>
+        <element label="Project Code" max_length="32" name="project_code" reference="x_149768_patch_req_server_projects" type="reference"/>
+        <element label="Project Owner" max_length="32" name="project_owner" reference="sys_user" type="reference"/>
+        <element label="Support Group" max_length="32" name="support_group" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="support_group"/>
+        </index>
+        <index name="index2">
+            <element name="infrastructure_owner"/>
+        </index>
+        <index name="index3">
+            <element name="project_owner"/>
+        </index>
+        <index name="index4">
+            <element name="maintenance_window"/>
+        </index>
+        <index name="index5">
+            <element name="project_code"/>
+        </index>
+    </element>
+</database>

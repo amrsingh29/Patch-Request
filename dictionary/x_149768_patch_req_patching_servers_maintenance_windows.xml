@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Patching Servers Maintenance Windows" max_length="40" name="x_149768_patch_req_patching_servers_maintenance_windows" type="collection">
+        <element label="Maintenance Window" max_length="32" name="maintenance_window" reference="cmn_schedule" type="reference"/>
+        <element label="Server" max_length="32" name="server" reference="x_149768_patch_req_patching_servers" type="reference"/>
+        <index name="index">
+            <element name="server"/>
+        </index>
+        <index name="index2">
+            <element name="maintenance_window"/>
+        </index>
+    </element>
+</database>
